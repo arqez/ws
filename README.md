@@ -1,7 +1,7 @@
 <h1 align="center">Arqez Server Nuker</h1>
 <p align="center"><img src="https://cdn.discordapp.com/attachments/813736191416598560/814784652186353704/nino4_cropped.gif" height=300></p>
 <p align="center">
-	<h7>This is a discord server nuker and webhook spammer which was written in 1nch and is easily executable through one single command.</h7>
+	<h7>This is a discord server nuker and webhook spammer which was written in discord.js and is easily executable through one single command.</h7>
 </p>
 <p align="center"><img src="https://send.thigh.pics/raw/emeFd2D1D.png"></p>
 <p align="center">
