@@ -3,7 +3,7 @@
 <p align="center">
 	<h7>This is a discord server nuker and webhook spammer which was written in discord.js and is easily executable through one single command.</h7>
 </p>
-<p align="center"><img src="https://send.thigh.pics/raw/emeFd2D1D.png"></p>
+<p align="center"><img src=""></p>
 <p align="center">
 	<h7>Keep in mind this is a selfbot, so please be awaare if anyone reports you.</h7>
 </p>
