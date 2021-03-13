@@ -10,4 +10,4 @@
 
 </p>
 <h1 align="center">Also</h1>
-<p>Huge credits to 1nch btw also this is not quite finished and packager files are not included yet.</p>
+<p>Huge credits to 1nch i suck at discord.js but im trying to improve, so i will add stuff here from time to time</p>
