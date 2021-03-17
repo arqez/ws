@@ -10,4 +10,4 @@
 
 </p>
 <h1 align="center">Also</h1>
-<p>Huge credits to 1nch i suck at discord.js but im trying to improve, so i will add stuff here from time to time</p>
+<p>i suck at discord.py but im trying to improve, so i will add stuff here from time to time</p>
