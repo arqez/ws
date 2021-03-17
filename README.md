@@ -13,6 +13,7 @@
 <p>i suck at discord.py but im trying to improve, so i will add stuff here from time to time</p>
 
 usage:
+
 $ccr - creates channels
 
 $cdel - deletes all channels
