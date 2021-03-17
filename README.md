@@ -16,7 +16,7 @@
 <h1 align="center">Usage</h1> 
 
 </p>
-</p> align="center">$ccr - creates channels
+$ccr - creates channels
 
 $cdel - deletes all channels
 
