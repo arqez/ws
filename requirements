@@ -1,0 +1,19 @@
+asyncio
+time
+logging
+aiohttp
+colorama
+random
+os
+requests
+discord
+from colorama import Fore, Style, init
+from discord import Permissions
+from discord import Webhook, AsyncWebhookAdapter
+from discord.ext import commands, tasks
+from discord.ext.commands import Bot
+from discord.ext.commands import *
+from colorama import Fore as c
+from colorama import Style as S
+sys
+json
