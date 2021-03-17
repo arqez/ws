@@ -23,3 +23,5 @@ $cdel - deletes all channels
 $nuke - deletes all existing channels, and makes a bunch of new ones
 
 $spam - sends a message in every channel multiple times. if you want to make this faster, spam the command each 3 seconds or so, and it will speed up as channel creation progresses</p>
+
+if u have any other questions, feel free to contact me through discord: arqez#0001
