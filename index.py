@@ -1,3 +1,4 @@
+# YOU CAN CUSTOMIZE EVERYTHING TO YOUR LIKING, INCLUDING THE BIO, CHANNEL NAMES, MESSAGES, ETC. #
 import asyncio
 import time
 import logging
