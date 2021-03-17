@@ -1,5 +1,5 @@
 <h1 align="center">Arqez Server Nuker</h1>
-<p align="center"><img src="https://cdn.discordapp.com/attachments/813736191416598560/814784652186353704/nino4_cropped.gif" height=300></p>
+<p align="center"><img src="https://cdn.discordapp.com/attachments/821450865822793730/821724197180145664/hayasaka2.gif" height=300></p>
 <p align="center">
 	<h7>This is a Discord nuke bot which is written in discord.py. It's very easy to use, and you can self-host it, or host it from a site like repl.it.</h7>
 </p>
