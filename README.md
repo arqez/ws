@@ -24,3 +24,4 @@ $nuke - deletes all existing channels, and makes a bunch of new ones
 
 $spam - sends a message in every channel multiple times. if you want to make this faster, spam the command each 3 seconds or so, and it will speed up as channel creation progresses</p>
 
+note: i dont update this anymore and dont plan to, this is very bad 
