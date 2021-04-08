@@ -1,5 +1,5 @@
 <h1 align="center">Arqez Server Nuker</h1>
-<p align="center"><img src="https://cdn.discordapp.com/attachments/821450865822793730/821724197180145664/hayasaka2.gif" height=300></p>
+<p align="center"><img src="https://cdn.discordapp.com/attachments/818180413201711125/829712876679594024/cat2.jpg" height=300></p>
 <p align="center">
 	<h7>This is a Discord nuke bot which is written in discord.py. It's very easy to use, and you can self-host it, or host it from a site like repl.it.</h7>
 </p>
@@ -24,4 +24,3 @@ $nuke - deletes all existing channels, and makes a bunch of new ones
 
 $spam - sends a message in every channel multiple times. if you want to make this faster, spam the command each 3 seconds or so, and it will speed up as channel creation progresses</p>
 
-if u have any other questions, feel free to contact me through discord: arqez#0001
